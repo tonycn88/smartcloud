@@ -1,0 +1,23 @@
+@startuml Users_Table
+
+!define TABLE(name,desc) class name as "desc" << (T,#FFAAAA) >>
+!define FIELD(name,desc) name : desc
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor DimGray
+    BorderColor DimGray
+    FontColor DimGray
+}
+
+package "MyDatabase" {
+    TABLE(Users, "User table") {
+        FIELD(userId, INT)
+        FIELD(username, VARCHAR(50))
+        FIELD(email, VARCHAR(100))
+        FIELD(password, VARCHAR(100))
+        FIELD(created_at, TIMESTAMP)
+    }
+}
+
+@enduml

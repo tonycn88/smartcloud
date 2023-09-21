@@ -1,0 +1,28 @@
+database:
+  dbtype: sqlite3
+  url: ../config/config.db
+rootdir: /home/ts/source/go/src/smartcloud
+rootpath: /
+authentication:
+  type: any
+  basic:
+    enabled: true
+    username: admin
+    password: mysecretpassword
+  token:
+    enabled: true
+    secret: myrefreshtokensecret
+  ca:
+    enabled: true
+    ca: /home/ts/source/go/src/smartcloud/config/certs/ca.crt
+server:
+  # protocol: https
+  # port: 443
+  # tls:
+  #   servercert: /home/ts/source/go/src/smartcloud/config/certs/server.crt
+  #   serverkey: /home/ts/source/go/src/smartcloud/config/certs/server.key
+  protocol: http
+  port: 80
+permission:
+  model: /home/ts/source/go/src/smartcloud/config/model.conf
+  policy: /home/ts/source/go/src/smartcloud/config/policy.csv
